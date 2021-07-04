@@ -1,0 +1,230 @@
+body {
+    background-image: url("../img/background.jpg");
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.main {
+    display: flex;
+    margin-top: 100px;
+}
+
+.left {
+    flex: 1;
+    padding: 0px 10px 0px 30px;
+}
+
+.right {
+    flex: 3;
+    padding: 0px 30px 0px 10px;
+}
+
+.leftblock {
+    background-color: rgb(184, 218, 191);
+    border: 5px solid rgb(181, 84, 84);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.rightblock {
+    background-color: rgb(184, 218, 191);
+    border: 5px solid rgb(181, 84, 84);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.typecontainer {
+    position: relative;
+    display: inline-flex;
+}
+
+input.radioimage {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+input.radioimage+img {
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+input.radioimage:checked+img {
+    border: 5px solid rgb(181, 84, 84);
+    border-radius: 50px;
+    border-style: dashed;
+    padding: 0px;
+    cursor: pointer;
+}
+
+input.radioheat {
+    position: absolute;
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+input.radioheat+img {
+    height: 50px;
+    width: 50px;
+    padding: 9px;
+    cursor: pointer;
+}
+
+input.radioheat:checked+img {
+    border: 4px solid rgb(181, 84, 84);
+    border-radius: 20px;
+    border-style: dashed;
+    padding: 5px;
+}
+
+h2 {
+    margin: 5px 0 5px 0;
+    font-size: 40px;
+    color: rgb(181, 84, 84);
+}
+
+.menuimage {
+    height: 200px;
+    width: 200px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.container {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 640px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.item {
+    padding: 5px;
+    width: 220px;
+    margin: 10px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.deletebutton {
+    margin: 10px auto 0 auto;
+}
+
+.toppings {
+    font-size: 20px;
+}
+
+.price {
+    font-size: 20px;
+}
+
+span img {
+    height: 40px;
+    width: 40px;
+}
+
+button {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid rgb(181, 84, 84);
+    border-radius: 0.6em;
+    color: rgb(181, 84, 84);
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 10px;
+    padding: 12px 28px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+button:hover {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 40px 40px rgb(181, 84, 84) inset;
+}
+
+#form-box{
+    height: 697px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.pizza-box .pizza-input {
+    width: auto;
+    padding: 10px 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(181, 84, 84);
+    margin: 5px;
+    border: none;
+    border-bottom: solid rgb(181, 84, 84);
+    background: transparent;
+}
+
+.pizza-box label {
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(181, 84, 84);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.pizza-box.pizza-input {
+    width: auto;
+    padding: 10px 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(181, 84, 84);
+    margin: 5px;
+    border: none;
+    border-bottom: solid rgb(181, 84, 84);
+    background: transparent;
+}
+
+.pizza-box.pizza-input:hover {
+    outline-style: solid;
+    outline-color: rgba(181, 84, 84, 0.445);
+    outline-width: 3px;
+}
+
+.pizza-box.pizza-input:focus-visible {
+    outline-style: solid;
+    outline-color: rgba(181, 84, 84, 0.445);
+    outline-width: 3px;
+}
+
+.pizza-box select {
+    width: auto;
+    padding: 10px 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(181, 84, 84);
+    margin: 5px;
+    border: none;
+    border-bottom: solid rgb(181, 84, 84);
+    background: transparent;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body onload="pageload()">
+    <div class="main">
+
+        <div class="left">
+            <div class="leftblock">
+                <h2>Add pizza to menu</h2>
+                <form class="pizza-box" autocomplete="off" id="form-box">
+                    <label>Name:</label>
+                    <input placeholder="Pizza name" class="pizza-input" id="name" type="text" pattern="[A-Za-z\s]+"
+                        maxlength="30" required><br>
+                    <label>Price:</label>
+                    <input id="price" type="number" class="pizza-input" min="0" maxlength="10" step=".01" required><br>
+                    <label for="heat">Heat:</label><br>
+                    <span class="typecontainer">
+                        <input class="radioheat" name="heat" id="heat" type="radio" onclick="storeHeat(this.value)"
+                            value="1">
+                        <img src="./img/pepper1.png">
+                    </span>
+                    <span class="typecontainer">
+                        <input class="radioheat" name="heat" id="heat1" type="radio" onclick="storeHeat(this.value)"
+                            value="2">
+                        <img src="./img/pepper2.png">
+                    </span>
+                    <span class="typecontainer">
+                        <input class="radioheat" name="heat" id="heat2" type="radio" onclick="storeHeat(this.value)"
+                            value="3">
+                        <img src="./img/pepper3.png">
+                    </span>
+                    <span class="typecontainer">
+                        <input class="radioheat" name="heat" id="heat3" type="radio" onclick="storeHeat(this.value)"
+                            value="4">
+                        <img src="./img/pepper4.png">
+                    </span><br>
+                    <label>Photo:</label><br>
+                    <span class="typecontainer">
+                        <input class="radioimage" name="image" id="photo1" onclick="storePhoto(this.value)" type="radio"
+                            value="1">
+                        <img src="./img/pizza1.png">
+                    </span>
+                    <span class="typecontainer">
+                        <input class="radioimage" name="image" id="photo2" onclick="storePhoto(this.value)" type="radio"
+                            value="2">
+                        <img src="./img/pizza2.png">
+                    </span>
+                    <span class="typecontainer">
+                        <input class="radioimage" name="image" id="photo3" onclick="storePhoto(this.value)" type="radio"
+                            value="3">
+                        <img src="./img/pizza3.png">
+                    </span>
+                    <span class="typecontainer">
+                        <input class="radioimage" name="image" id="photo4" onclick="storePhoto(this.value)" type="radio"
+                            value="4">
+                        <img src="./img/pizza4.png">
+                    </span>
+                    <span class="typecontainer">
+                        <input class="radioimage" name="image" id="photo5" onclick="storePhoto(this.value)" type="radio"
+                            value="5">
+                        <img src="./img/pizza5.png">
+                    </span>
+                    <span class="typecontainer">
+                        <input class="radioimage" name="image" id="photo6" onclick="storePhoto(this.value)" type="radio"
+                            value="6">
+                        <img src="./img/pizza6.png">
+                    </span><br>
+                    <label>How many toppings:</label>
+                    <input type="number" class="pizza-input" oninput="pageToppings()" id="toppings-count" value="2"
+                        min="2" max="10" step="1"><br>
+                    <div id="toppings-list">
+                    </div>
+                    <button onclick="storeData(event)">Add pizza</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="right">
+            <div class="rightblock">
+                <h2>Pizza menu</h2>
+                <form class="pizza-box">
+                    <label for="pizzas">Sort by:</label>
+                    <select id="pizza-sort" name="pizzas" onchange="onSortChange(event.target.value)">
+                        <option value="pizzaname">name</option>
+                        <option value="pizzaheat">heat</option>
+                        <option value="pizzaprice">price</option>
+                    </select>
+                </form>
+                <ul class="container" id="pizza-menu"></ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
