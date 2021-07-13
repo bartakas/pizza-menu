@@ -114,7 +114,7 @@ function showData() {
 
 function removePizza(id) {
     const sessionPizza = getPizzasFromStorage();
-    if (confirm('Are you sure you want to remove ' + sessionPizza[i].pizzaname + ' pizza?')) {
+    if (confirm('Are you sure you want to remove ' + sessionPizza[id].pizzaname + ' pizza?')) {
         sessionPizza.splice(id, 1);
         sessionStorage.setItem(storageKey, JSON.stringify(sessionPizza));
         showData();
